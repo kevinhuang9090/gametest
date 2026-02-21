@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+    index.html - 五子棋游戏主页面
+    包含页面结构、资源引入和基础布局
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋游戏</title>
+    <!-- 引入全局样式文件 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 游戏主容器 -->
+    <div class="game-container">
+        <!-- 顶部信息栏：显示当前玩家和游戏状态 -->
+        <div class="game-info">
+            <span id="currentPlayerText">当前回合：黑棋</span>
+        </div>
+
+        <!-- 棋盘容器 -->
+        <div class="board-wrapper">
+            <!-- 棋盘画布，由 board.js 负责渲染 -->
+            <canvas id="chessBoard" width="620" height="620"></canvas>
+        </div>
+
+        <!-- 重新开始按钮 -->
+        <button id="restartBtn" class="restart-btn">重新开始</button>
+    </div>
+
+    <!-- 引入 JavaScript 脚本（按依赖顺序） -->
+    <script src="js/game.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

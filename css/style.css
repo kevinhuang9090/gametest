@@ -1,0 +1,120 @@
+/*
+    css/style.css - 五子棋游戏全局样式
+    包含棋盘、棋子、按钮、提示文字等所有视觉样式
+*/
+
+/* 全局重置 - 清除默认边距和内边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 页面整体布局 - 垂直居中 */
+body {
+    /* 布局 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* 背景色 */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* 字体 */
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+/* 游戏主容器 */
+.game-container {
+    /* 布局 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* 样式 */
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    /* 阴影效果 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 顶部信息栏 */
+.game-info {
+    /* 布局 */
+    text-align: center;
+    margin-bottom: 10px;
+    /* 样式 */
+    font-size: 24px;
+    font-weight: bold;
+    /* 交互 */
+    cursor: default;
+}
+
+/* 棋盘容器 - 用于居中和添加边框 */
+.board-wrapper {
+    /* 布局 */
+    padding: 10px;
+    /* 样式 */
+    background: #8b4513;
+    border-radius: 5px;
+    /* 阴影效果 */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3),
+                0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 棋盘画布 */
+#chessBoard {
+    /* 布局 */
+    display: block;
+    /* 样式 */
+    background: #f0e6d2;
+    /* 交互 */
+    cursor: pointer;
+    /* 边框 */
+    border-radius: 3px;
+}
+
+/* 重新开始按钮 */
+.restart-btn {
+    /* 布局 */
+    padding: 12px 40px;
+    /* 样式 */
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 25px;
+    /* 交互 */
+    cursor: pointer;
+    /* 过渡效果 */
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* 阴影 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 按钮 hover 状态 */
+.restart-btn:hover {
+    /* 交互效果 */
+    transform: translateY(-2px);
+    /* 阴影加深 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 按钮 active 状态（点击时） */
+.restart-btn:active {
+    /* 交互效果 */
+    transform: translateY(0);
+    /* 阴影减弱 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 当前回合文字 - 黑棋时的颜色 */
+.player-black {
+    color: #333;
+}
+
+/* 当前回合文字 - 白棋时的颜色 */
+.player-white {
+    color: #666;
+}
